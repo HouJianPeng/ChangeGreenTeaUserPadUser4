@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15C27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TheHeaderView" id="4XV-bc-9Yn" customClass="TheHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="c35-O4-o0p">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="BBz-Oz-4rU">
+                        <size key="itemSize" width="60" height="60"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="19d-nh-fY5"/>
+                        <outlet property="delegate" destination="-1" id="mQr-5h-HvN"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-Gu-5lu" customClass="ImagePlayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="108" id="JPR-sT-ZXP">
+                            <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="JPR-sT-ZXP"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="JPR-sT-ZXP"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DCe-Gu-5lu" secondAttribute="trailing" constant="43" id="53v-nN-eAr">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="DCe-Gu-5lu" firstAttribute="top" secondItem="4XV-bc-9Yn" secondAttribute="top" constant="33" id="5cF-Ho-DPa">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="c35-O4-o0p" firstAttribute="width" secondItem="DCe-Gu-5lu" secondAttribute="width" id="EcI-zU-FaB"/>
+                <constraint firstItem="c35-O4-o0p" firstAttribute="top" secondItem="DCe-Gu-5lu" secondAttribute="bottom" constant="42" id="Oz8-VB-zfI">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="DCe-Gu-5lu" secondAttribute="bottom" constant="20" id="bYT-Re-Zva">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="c35-O4-o0p" secondAttribute="bottom" constant="64" id="hM0-bX-0gc">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="centerX" secondItem="DCe-Gu-5lu" secondAttribute="centerX" constant="-18" id="nuh-XE-edV">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="c35-O4-o0p" secondAttribute="trailing" constant="223" id="tcY-sp-46V">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="c35-O4-o0p" firstAttribute="leading" secondItem="4XV-bc-9Yn" secondAttribute="leading" constant="179" id="w66-Yg-r66">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="DCe-Gu-5lu" firstAttribute="leading" secondItem="4XV-bc-9Yn" secondAttribute="leading" constant="18" id="xF9-OQ-3ax">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="c35-O4-o0p"/>
+                    <exclude reference="DCe-Gu-5lu"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="53v-nN-eAr"/>
+                    <exclude reference="5cF-Ho-DPa"/>
+                    <exclude reference="bYT-Re-Zva"/>
+                    <exclude reference="nuh-XE-edV"/>
+                    <exclude reference="xF9-OQ-3ax"/>
+                    <exclude reference="EcI-zU-FaB"/>
+                    <exclude reference="Oz8-VB-zfI"/>
+                    <exclude reference="hM0-bX-0gc"/>
+                    <exclude reference="tcY-sp-46V"/>
+                    <exclude reference="w66-Yg-r66"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="subviews">
+                    <include reference="c35-O4-o0p"/>
+                    <include reference="DCe-Gu-5lu"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="53v-nN-eAr"/>
+                    <include reference="5cF-Ho-DPa"/>
+                    <exclude reference="bYT-Re-Zva"/>
+                    <include reference="nuh-XE-edV"/>
+                    <include reference="xF9-OQ-3ax"/>
+                    <include reference="EcI-zU-FaB"/>
+                    <include reference="Oz8-VB-zfI"/>
+                    <include reference="hM0-bX-0gc"/>
+                    <include reference="tcY-sp-46V"/>
+                    <include reference="w66-Yg-r66"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="imagePlayerView" destination="DCe-Gu-5lu" id="PNW-wZ-a7D"/>
+                <outlet property="theCollectionView" destination="c35-O4-o0p" id="ppP-cr-tEf"/>
+            </connections>
+            <point key="canvasLocation" x="297" y="286"/>
+        </collectionReusableView>
+    </objects>
+</document>

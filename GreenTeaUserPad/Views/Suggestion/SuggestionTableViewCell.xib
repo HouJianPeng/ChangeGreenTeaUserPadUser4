@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuggestionTableViewCell" rowHeight="57" id="KGk-i7-Jjw" customClass="SuggestionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gyf-h2-xvu">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="247" id="QgN-Uy-wUi">
+                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QgN-Uy-wUi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="QgN-Uy-wUi"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gyf-h2-xvu" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="7iZ-Ys-X7R"/>
+                    <constraint firstItem="Gyf-h2-xvu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="KOn-eC-IC4">
+                        <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                    </constraint>
+                    <constraint firstItem="Gyf-h2-xvu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="toA-1Z-Aay">
+                        <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                    </constraint>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="Gyf-h2-xvu"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="7iZ-Ys-X7R"/>
+                        <exclude reference="KOn-eC-IC4"/>
+                        <exclude reference="toA-1Z-Aay"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=regular">
+                    <mask key="subviews">
+                        <include reference="Gyf-h2-xvu"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="7iZ-Ys-X7R"/>
+                        <include reference="KOn-eC-IC4"/>
+                        <include reference="toA-1Z-Aay"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="theStateImage" destination="Gyf-h2-xvu" id="VAz-AG-aic"/>
+            </connections>
+            <point key="canvasLocation" x="362" y="182.5"/>
+        </tableViewCell>
+    </objects>
+</document>
